@@ -24,7 +24,7 @@ To run it you have to have installed [node.js](https://nodejs.org/)
 8. Now go back to dashboard and search using search bar on top "cloud vision api" and go to the only result
 9. Click **ENABLE** button and you should be now able to run this program 👌
 
-## How to use it
+## How to use it? 🤔
 
 Open terminal in a directory where this program is 
 
