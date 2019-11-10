@@ -117,11 +117,11 @@ async function main() {
 
   const magick_args = (file: string, text: string) => {
     let a = [file, '-background', 'Khaki', `label:'${text}'`, '-gravity', 'Center', '-append', file]
-    console.log({ magick })
+    // console.log({ magick })
     if (magick === 'magick') {
       a.unshift('convert')
     }
-    console.log({ a })
+    // console.log({ a })
     return a
   }
   for (const c of checked) {
@@ -153,7 +153,7 @@ async function main() {
     openFolderParams.unshift('')
   }
 
-  execa(open(), openFolderParams)
+  execa(run(), openFolderParams)
 }
 
 main()
