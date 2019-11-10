@@ -1,4 +1,4 @@
-# aym
+# Are You Monetized? (aym)
 
 A CLI tool for YouTubers to check if a video they've made will be monetized
 
