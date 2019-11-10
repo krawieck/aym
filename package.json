@@ -1,0 +1,20 @@
+{
+  "name": "ayd",
+  "version": "1.0.0",
+  "description": "are you demonetized?",
+  "main": "ayd.js",
+  "repository": "l",
+  "author": "Filip Krawczyk",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/vision": "^1.7.0",
+    "execa": "^3.2.0",
+    "moment": "^2.24.0"
+  },
+  "scripts": {
+    "start": "tsc && ayd.js"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.2"
+  }
+}
