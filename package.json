@@ -12,7 +12,7 @@
     "moment": "^2.24.0"
   },
   "scripts": {
-    "start": "tsc && ayd.js"
+    "start": "tsc && node ayd.js"
   },
   "devDependencies": {
     "typescript": "^3.7.2"

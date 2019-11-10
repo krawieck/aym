@@ -142,7 +142,7 @@ async function main() {
   //! OPEN FOLDER
 
   console.log({
-    run: open(),
+    run: run(),
     p
   })
   const openFolderParams = [p]
@@ -163,7 +163,7 @@ function rip(...msg: any) {
   return process.exit(1)
 }
 
-function open() {
+function run() {
   switch (process.platform) {
     case 'darwin':
       return 'open'
