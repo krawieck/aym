@@ -22,18 +22,19 @@ async function main() {
     rip('ffmpeg NEEDS TO BE INSTALLED')
   }
 
-  let magick: string
-  try {
-    await execa('convert')
-    magick = 'convert'
-  } catch {
+  const magick = await (async () => {
     try {
-      await execa('magick')
-      magick = 'magick'
+      await execa('convert')
+      return 'convert'
     } catch {
-      rip('ImageMagick NEEDS TO BE INSTALLED')
+      try {
+        await execa('magick')
+        return 'magick'
+      } catch {
+        return rip('ImageMagick NEEDS TO BE INSTALLED')
+      }
     }
-  }
+  })()
 
   //! GET ARGS
 
