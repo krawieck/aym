@@ -38,7 +38,7 @@ async function main() {
 
   //! GET ARGS
 
-  const [_, __, file, fps_] = process.argv
+  const [, , file, fps_] = process.argv
   const tmpdir = os.tmpdir()
   // console.log({ file, fps: fps_ })
   if (file === undefined) {
