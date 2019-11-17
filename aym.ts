@@ -139,7 +139,7 @@ async function main() {
       file
     } = c
     await execa(
-      magick!,
+      magick,
       magick_args(
         file,
         `Adult: ${adult}, Medical: ${medical},\nSpoof: ${spoof}, Violence: ${violence}, Racy: ${racy}`
