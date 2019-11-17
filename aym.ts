@@ -104,10 +104,17 @@ async function main() {
   }
 
   /** Check image using google vision API */
-  async function check(fileName: string) {
+  async function check(fileName: string): Promise<SafeSearchAnnotation> {
     // @ts-ignore // cuz nobody made types for vision package :<
     const [result] = await client.safeSearchDetection(fileName)
-    return result.safeSearchAnnotation
+    const r = result.safeSearchAnnotation
+    return {
+      adult: r.adult,
+      spoof: r.spoof,
+      medical: r.medical,
+      violence: r.violence,
+      racy: r.racy
+    }
   }
 
   fs.writeFile(path.resolve(p, 'results.json'), JSON.stringify(checked))
@@ -175,4 +182,10 @@ function run() {
   }
 }
 
-interface SafeSearchAnnotation {}
+interface SafeSearchAnnotation {
+  adult: string
+  medical: string
+  spoof: string
+  violence: string
+  racy: string
+}
