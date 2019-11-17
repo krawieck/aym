@@ -52,17 +52,18 @@ async function main() {
 
   //! INITIALIZE GOOGLE VISION
 
-  let client: any
-  try {
-    client = new vision.ImageAnnotatorClient({
-      credentials: cred
-    })
-  } catch (e) {
-    rip(
-      e,
-      '\n\nGOOGLE CLOUD VISION FAILED TO INITIALIZE\nPROBABLY SOMETHING IS WRONG WITH CREDENTIALS'
-    )
-  }
+  const client: any = (() => {
+    try {
+      return new vision.ImageAnnotatorClient({
+        credentials: cred
+      })
+    } catch (e) {
+      return rip(
+        e,
+        '\n\nGOOGLE CLOUD VISION FAILED TO INITIALIZE\nPROBABLY SOMETHING IS WRONG WITH CREDENTIALS'
+      )
+    }
+  })()
 
   //! CREATE TEMP DIR WHERE IMAGES WILL BE STORED
 
