@@ -1,8 +1,8 @@
 {
-  "name": "ayd",
+  "name": "aym",
   "version": "1.0.0",
-  "description": "are you demonetized?",
-  "main": "ayd.js",
+  "description": "are you (de)monetized?",
+  "main": "aym.js",
   "repository": "",
   "author": "Filip Krawczyk",
   "license": "MIT",
@@ -12,7 +12,7 @@
     "moment": "^2.24.0"
   },
   "scripts": {
-    "start": "tsc && node ayd.js"
+    "start": "tsc && node aym.js"
   },
   "devDependencies": {
     "typescript": "^3.7.2"
