@@ -9,7 +9,7 @@
   "dependencies": {
     "@google-cloud/vision": "^1.7.0",
     "execa": "^3.2.0",
-    "moment": "^2.24.0"
+    "moment": "^2.29.4"
   },
   "scripts": {
     "start": "tsc && node aym.js"
